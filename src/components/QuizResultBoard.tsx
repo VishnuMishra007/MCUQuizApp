@@ -8,6 +8,7 @@ export const QuizResultBoard = (props: any) => {
             <Typography variant="h6" component="h6" color='black'>{props.isPassed ? `You've craked the quiz! Congratulations!`: 'Try better next time, Good luck !'}</Typography>
             <div className="score-animation">
             <div className="total-score">
+                <Typography variant="body1" fontSize="30px">You Scored </Typography>
                 <Typography variant="body1" fontSize="60px">{props.percentage}%</Typography>
             </div>
             <div className="user-score">
