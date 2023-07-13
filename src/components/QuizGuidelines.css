@@ -1,0 +1,13 @@
+.quiz-guidelines-conatiner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.size-xs{
+    font-size: x-small;
+    margin: 0 0 20px 0;
+}

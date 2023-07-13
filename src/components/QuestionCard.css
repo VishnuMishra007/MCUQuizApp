@@ -1,0 +1,23 @@
+
+.question-card{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 5px 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: black;
+    font-size: large;
+}
+
+.que-div{
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.selected{
+    background-color: #1565c0 !important;
+    color: white !important;
+}

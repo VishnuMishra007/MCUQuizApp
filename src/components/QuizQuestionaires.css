@@ -1,0 +1,19 @@
+
+.question-board-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 5px 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: black;
+    font-size: large;
+    border-radius: 1%;
+    padding: 5%;
+}
+
+.button-group{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 0 1% 0;
+}
