@@ -1,0 +1,11 @@
+.option-check-span-correct{
+    color: green;
+}
+
+.option-check-span-incorrect{
+    color: red;
+}
+
+.option-check-span-unanswered{
+    color: yellow;
+}

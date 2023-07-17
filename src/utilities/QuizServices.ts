@@ -8,6 +8,10 @@ export const getIsCorrect = (selected: number, queNo: number): boolean => {
     return false;
 }
 
+export const getCorrectOption = (queNo: number): number => {
+    return QuizQuestionsData.Answers[queNo-1];
+}
+
 const getTotalCorrect = (updatedState: any) => {
     let totalCorrect = 0;
     for(let key in updatedState){
@@ -20,13 +24,13 @@ const getTotalCorrect = (updatedState: any) => {
 
  const getScoreCategory = (scorePercentage: number): string => {
     switch(scorePercentage>=0){
-        case scorePercentage>0 && scorePercentage<35:
+        case scorePercentage>0 && scorePercentage<=35:
             return 'Poor';
-        case scorePercentage>35 && scorePercentage<50:
+        case scorePercentage>35 && scorePercentage<=50:
             return 'Average';
-        case scorePercentage>50 && scorePercentage<65:
+        case scorePercentage>50 && scorePercentage<=65:
             return 'Good';
-        case scorePercentage>65 && scorePercentage<85:
+        case scorePercentage>65 && scorePercentage<=85:
             return 'Very Good';
         case scorePercentage>85:
             return 'Excellent'
@@ -50,4 +54,20 @@ export const getUserScoreCard = () => {
         total: totalQuestions,
         scoreCategory: scoreCategory
     }
+}
+
+
+export const getSolutionPageData = () => {
+    let solutionData = [];
+    const updatedState = store.getState();
+    for(let i=0;i< QuizQuestionsData.Questions.length;i++){
+        solutionData.push({
+            question: QuizQuestionsData.Questions[i],
+            selectedOption: updatedState[i+1]? updatedState[i+1].selectedOption: 0,
+            correctOption:  QuizQuestionsData.Answers[i],
+            options: QuizQuestionsData.Options[i]
+        });
+    }
+    console.log(solutionData);
+    return solutionData;
 }
